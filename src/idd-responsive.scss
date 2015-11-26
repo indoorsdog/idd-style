@@ -1,0 +1,31 @@
+@mixin idd-responsive-styles($min-width: 0px) {
+  @media screen {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  }
+}
+
+@mixin idd-responsive-bootstrap-xs() {
+  @include idd-responsive-styles() {
+    @content;
+  };
+};
+
+@mixin idd-responsive-bootstrap-md() {
+  @include idd-responsive-styles($min-width: 768px) {
+    @content;
+  };
+};
+
+@mixin idd-responsive-bootstrap-lg() {
+  @include idd-responsive-styles($min-width: 992px) {
+    @content;
+  };
+}
+
+@mixin idd-responsive-bootstrap-xl() {
+  @include idd-responsive-styles($min-width: 1200px) {
+    @content;
+  };
+}

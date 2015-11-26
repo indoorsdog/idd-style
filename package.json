@@ -1,0 +1,24 @@
+{
+  "author": {
+    "url": "https://github.com/indoorsdog"
+  },
+  "bugs": {
+    "url": "https://github.com/indoorsdog/idd-style/issues"
+  },
+  "description": "A small flexbox layout library.",
+  "devDependencies": {
+    "del": "2.1.0",
+    "gulp": "3.9.0",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.1.0",
+    "gulp-sourcemaps": "1.6.0"
+  },
+  "keywords": ["indoorsdog", "idd", "sass", "flexbox"],
+  "license": "MIT",
+  "name": "idd-style",
+  "preferGlobal": false,
+  "private": false,
+  "repository": "indoorsdog/idd-style",
+  "version": "1.0.0"
+}

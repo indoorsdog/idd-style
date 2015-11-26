@@ -1,0 +1,41 @@
+@mixin idd-flex() {
+  display: flex;
+}
+
+@mixin idd-flex-direction($direction: row) {
+  @include idd-flex();
+  flex-direction: $direction;
+}
+
+@mixin idd-flex-grow($number: 1) {
+  @include idd-flex();
+  flex-grow: $number;
+}
+
+@mixin idd-flex-shrink($number: 0) {
+  @include idd-flex();
+  flex-shrink: 0;
+}
+
+@mixin idd-flex-shrink($number: 0) {
+  @include idd-flex();
+  flex-shrink: 0;
+}
+
+.idd-flex-grow-1 {
+  @include idd-flex-grow();
+}
+
+.idd-flex-shrink-0 {
+  @include idd-flex-shrink();
+}
+
+.idd-flex-space-around {
+  @include idd-flex();
+  justify-content: space-around !important;
+}
+
+.idd-flex-space-between {
+  @include idd-flex();
+  justify-content: space-between !important;
+}

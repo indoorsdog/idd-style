@@ -1,0 +1,141 @@
+@mixin height($height: 100%) {
+  height: $height;
+  max-height: $height;
+  min-height: $height;
+}
+
+.idd-h-auto {
+  height: auto;
+}
+
+.idd-h-view {
+  @include height(100vh);
+}
+
+.idd-h-1_20 {
+  @include height(5%);
+}
+
+.idd-h-1_12 {
+  @include height(8.333333%);
+}
+
+.idd-h-1_10, .idd-h-2_20  {
+  @include height(10%);
+}
+
+.idd-h-1_8 {
+  @include height(12.5%);
+}
+
+.idd-h-3_20 {
+  @include height(15%);
+}
+
+.idd-h-1_6, .idd-h-2_12  {
+  @include height(16.666666%);
+}
+
+.idd-h-1_5, .idd-h-2_10, .idd-h-4_20 {
+  @include height(20%);
+}
+
+.idd-h-1_4, .idd-h-2_8, .idd-h-3_12, .idd-h-5_20 {
+  @include height(25%);
+}
+
+.idd-h-3_10, .idd-h-6_20 {
+  @include height(30%);
+}
+
+.idd-h-1_3, .idd-h-2_6, .idd-h-4_12 {
+  @include height(33.333333%);
+}
+
+.idd-h-7_20 {
+  @include height(35%);
+}
+
+.idd-h-3_8 {
+  @include height(37.5%);
+}
+
+.idd-h-2_5, .idd-h-4_10, .idd-h-8_20 {
+  @include height(40%);
+}
+
+.idd-h-5_12 {
+  @include height(41.666666%);
+}
+
+.idd-h-9_20 {
+  @include height(45%);
+}
+
+.idd-h-1_2, .idd-h-2_4, .idd-h-3_6, .idd-h-4_8, .idd-h-5_10, .idd-h-6_12, .idd-h-10_20 {
+  @include height(50%);
+}
+
+.idd-h-11_20 {
+  @include height(55%);
+}
+
+.idd-h-7_12 {
+  @include height(58.333333%);
+}
+
+.idd-h-3_5, .idd-h-6_10, .idd-h-12_20 {
+  @include height(60%);
+}
+
+.idd-h-5_8 {
+  @include height(62.5%);
+}
+
+.idd-h-13_20 {
+  @include height(65%);
+}
+
+.idd-h-2_3, .idd-h-4_6, .idd-h-8_12 {
+  @include height(66.666666%);
+}
+
+.idd-h-7_10, .idd-h-14_20 {
+  @include height(70%);
+}
+
+.idd-h-3_4, .idd-h-6_8, .idd-h-9_12, .idd-h-15_20 {
+  @include height(75%);
+}
+
+.idd-h-4_5, .idd-h-8_10, .idd-h-16_20 {
+  @include height(80%);
+}
+
+.idd-h-5_6, .idd-h-10_12 {
+  @include height(83.333333%);
+}
+
+.idd-h-17_20 {
+  @include height(85%);
+}
+
+.idd-h-7_8 {
+  @include height(87.5%);
+}
+
+.idd-h-9_10, .idd-h-18_20 {
+  @include height(90%);
+}
+
+.idd-h-11_12 {
+  @include height(91.666666%);
+}
+
+.idd-h-19_20 {
+  @include height(95%);
+}
+
+.idd-h-1 {
+  @include height();
+}
