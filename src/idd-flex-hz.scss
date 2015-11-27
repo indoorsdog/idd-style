@@ -1,6 +1,6 @@
 @import "idd-flex";
 
-.idd-flex-hz {
+.idd-flex-hz, .idd-flex-hz-1 {
   @include idd-flex-direction();
   justify-content: flex-start;
 }

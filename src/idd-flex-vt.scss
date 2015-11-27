@@ -1,6 +1,6 @@
 @import "idd-flex";
 
-.idd-flex-vt {
+.idd-flex-vt, .idd-flex-vt-1 {
   @include idd-flex-direction(column);
   align-items: flex-start;
 }

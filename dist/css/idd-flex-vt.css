@@ -30,7 +30,7 @@
       -ms-flex-pack: justify !important;
           justify-content: space-between !important; }
 
-.idd-flex-vt, .idd-flex-vt-2, .idd-flex-vt-5, .idd-flex-vt-8, .idd-flex-vt-3, .idd-flex-vt-6, .idd-flex-vt-9, .idd-flex-vt-4, .idd-flex-vt-7 {
+.idd-flex-vt, .idd-flex-vt-2, .idd-flex-vt-5, .idd-flex-vt-8, .idd-flex-vt-3, .idd-flex-vt-6, .idd-flex-vt-9, .idd-flex-vt-4, .idd-flex-vt-7, .idd-flex-vt-1 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
