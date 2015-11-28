@@ -39,3 +39,8 @@
   @include idd-flex();
   justify-content: space-between !important;
 }
+
+.idd-flex-wrap {
+  @include idd-flex();
+  flex-wrap: wrap;
+}
