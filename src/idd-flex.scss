@@ -22,6 +22,11 @@
   flex-shrink: 0;
 }
 
+@mixin idd-flex-wrap($wrap: wrap) {
+  @include idd-flex();
+  flex-wrap: $wrap;
+}
+
 .idd-flex-grow-1 {
   @include idd-flex-grow();
 }
@@ -41,6 +46,5 @@
 }
 
 .idd-flex-wrap {
-  @include idd-flex();
-  flex-wrap: wrap;
+  @include idd-flex-wrap();
 }
