@@ -1,0 +1,43 @@
+input[type="radio"] {
+    cursor: pointer;
+}
+
+.parent {
+    background-color: black;
+    height: 300px;
+    width: 300px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.box {
+    border: 2px solid lime;
+}
+
+.number {
+    color: lime;
+    font-size: 30px;
+}
+
+.parent-class-label {
+    color: dimgray;
+}
+
+.sub-section {
+    padding-top: 10px;
+}
+
+.angucomplete-dropdown {
+    height: 200px;
+    overflow-y: scroll;
+}
