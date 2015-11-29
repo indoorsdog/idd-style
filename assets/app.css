@@ -2,6 +2,10 @@ input[type="radio"] {
     cursor: pointer;
 }
 
+body {
+    width: 1440px;
+}
+
 .parent {
     background-color: black;
     height: 300px;
