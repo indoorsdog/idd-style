@@ -10,24 +10,27 @@
     <link href="dist/css/idd-style.min.css" rel="stylesheet" id="idd-style">
     <link href="assets/app.css" rel="stylesheet">
 </head>
-<body class="idd-h-view idd-w-view idd-flex-hz-2 idd-flex-shrink-0">
-<div class="idd-flex-vt idd-w-3_5 idd-flex-shrink-0">
-    <div class="idd-flex-hz-2 idd-w-1 idd-flex-shrink-0">
+<body class="idd-h-view idd-w-view idd-flex-hz-2">
+<div class="idd-flex-vt idd-w-3_5">
+    <div class="idd-flex-hz-2 idd-w-1">
         <h1 class="page-title">idd-style demo</h1>
     </div>
-    <div class="idd-flex-vt idd-flex-shrink-0">
+    <div class="idd-flex-vt">
         <h3>Flexbox</h3>
         <hr>
     </div>
-    <div class="idd-flex-vt idd-w-1 sub-section idd-flex-shrink-0">
+    <div class="idd-flex-vt idd-w-1 sub-section">
         <p>The black box is the parent container to which the classes selected from the form inputs will be
             applied.</p>
         <p>The colored squares are its affected children.</p>
+        <p><strong>IMPORTANT:</strong> The "base" flex classes of this library set <code>flex-shrink</code> to 0, when the default in the spec is 1 (i.e. things can shrink). After extensive use of flexbox, the default tended to surprise. When we set dimensions (see next section), we expected those dimensions, but in testing would wind up with vastly different layouts across browsers due to differing agent interpretations of <code>flex-shrink</code>.</p>
+        <p>If you desire the default <code>flex-shrink: 1</code>, use any of this library's flex classes but with the suffix <code>!</code> (e.g. <code>class="idd-flex-hz-2!"</code> is the shrinkable version of <code>class="idd-flex-hz-2"</code>).</p>
+        <p>In fact, notice the difference on the parent box as you apply the different flavors.</p>
     </div>
-    <div class="idd-flex-hz idd-w-1 sub-section idd-flex-shrink-0" data-ng-controller="FlexboxCtrl">
-        <div class="idd-flex-hz idd-w-1_3 idd-flex-shrink-0">
-            <form class="idd-flex-vt-2 idd-w-1 idd-flex-shrink-0" novalidate>
-                <fieldset class="idd-flex-vt idd-w-19_20 idd-flex-shrink-0">
+    <div class="idd-flex-hz idd-w-1 sub-section" data-ng-controller="FlexboxCtrl">
+        <div class="idd-flex-hz idd-w-1_3">
+            <form class="idd-flex-vt-2 idd-w-1" novalidate>
+                <fieldset class="idd-flex-vt idd-w-19_20">
                     <angucomplete-alt id="autocomplete-flex"
                                       placeholder="Set Flex Class (e.g. hz-* or vt-*)"
                                       data-local-data="flexClasses"
@@ -41,24 +44,21 @@
                                       data-input-class="idd-w-19_20">
                     </angucomplete-alt>
                     <label>Select a flex modifier class:</label>
-                    <div class="idd-flex-hz idd-flex-shrink-0">
-                        <p class="idd-flex-hz-5 idd-w-1_8 idd-flex-shrink-0">
-                            <input type="radio" name="flex-modifier" value="None" data-ng-model="modifier"
-                                   value="around" checked>
+                    <div class="idd-flex-hz">
+                        <p class="idd-flex-hz-5 idd-w-1_8">
+                            <input type="radio" name="flex-modifier" value="None" data-ng-model="modifier" checked>
                         </p>
                         <p>None</p>
                     </div>
-                    <div class="idd-flex-hz idd-flex-shrink-0">
-                        <p class="idd-flex-hz-5 idd-w-1_8 idd-flex-shrink-0">
-                            <input type="radio" name="flex-modifier" value="idd-flex-space-around"
-                                   data-ng-model="modifier" value="around">
+                    <div class="idd-flex-hz">
+                        <p class="idd-flex-hz-5 idd-w-1_8">
+                            <input type="radio" name="flex-modifier" value="idd-flex-space-around" data-ng-model="modifier">
                         </p>
                         <p>idd-flex-space-around</p>
                     </div>
-                    <div class="idd-flex-hz idd-flex-shrink-0">
-                        <p class="idd-flex-hz-5 idd-w-1_8 idd-flex-shrink-0">
-                            <input type="radio" name="flex-modifier" value="idd-flex-space-between"
-                                   data-ng-model="modifier" value="between">
+                    <div class="idd-flex-hz">
+                        <p class="idd-flex-hz-5 idd-w-1_8">
+                            <input type="radio" name="flex-modifier" value="idd-flex-space-between" data-ng-model="modifier">
                         </p>
                         <p>idd-flex-space-between</p>
                     </div>
@@ -72,52 +72,52 @@
                 <div class="red idd-h-1_5 idd-w-1_5"></div>
             </div>
         </div>
-        <div class="idd-flex-vt-2 idd-w-1_3 idd-flex-shrink-0">
-            <div class="idd-w-19_20">
+        <div class="idd-flex-vt-2 idd-w-1_3">
+            <div class="idd-w-17_20">
                 <p><span class="parent-class-label">Parent classes:</span>&nbsp;<strong>{{parentClasses.join(', ')}}</strong></p>
             </div>
         </div>
     </div>
-    <div class="idd-flex-vt idd-w-1 sub-section idd-flex-shrink-0">
+    <div class="idd-flex-vt idd-w-1 sub-section">
         <p>This small library translates the 9-section layout design of flexbox like so:</p>
-        <div class="idd-flex-hz idd-w-1 idd-flex-shrink-0">
-            <div class="idd-flex-hz-5 idd-w-1_2 idd-flex-shrink-0">
+        <div class="idd-flex-hz idd-w-1">
+            <div class="idd-flex-hz-5 idd-w-1_2">
                 <div class="parent idd-flex-hz idd-flex-wrap">
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>1</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>2</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>3</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>4</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>5</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>6</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>7</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>8</strong></span>
                     </div>
-                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box idd-flex-shrink-0">
+                    <div class="idd-flex-hz-5 idd-h-1_3 idd-w-1_3 box">
                         <span class="number"><strong>9</strong></span>
                     </div>
                 </div>
             </div>
-            <div class="idd-flex-hz-5 idd-w-1_2 idd-flex-shrink-0">
+            <div class="idd-flex-hz-5 idd-w-1_2">
                 <img src="assets/idd-style-flex.png" class="idd-w-1">
             </div>
         </div>
     </div>
-    <div class="idd-flex-vt idd-w-1 sub-section idd-flex-shrink-0">
+    <div class="idd-flex-vt idd-w-1 sub-section">
         <p>Notice that if modifying with <code>idd-flex-space-around</code> or <code>idd-flex-space-between</code>...
         </p>
         <ul>
@@ -129,18 +129,18 @@
         <p>Also note that <code>idd-flex-hz</code> and <code>idd-flex-vt</code> are synonyms for
             <code>idd-flex-hz-1</code> and <code>idd-flex-vt-1</code>, respectively.</p>
     </div>
-    <div class="idd-flex-vt idd-flex-shrink-0">
+    <div class="idd-flex-vt">
         <h3>Height/Width</h3>
         <hr>
     </div>
-    <div class="idd-flex-vt idd-w-1 sub-section idd-flex-shrink-0">
+    <div class="idd-flex-vt idd-w-1 sub-section">
         <p>The black box is the parent container, of a fixed height and width.</p>
         <p>The yellow box is its child whose dimensions will be set by the selected classes.</p>
     </div>
-    <div class="idd-flex-hz idd-w-1 sub-section idd-flex-shrink-0" data-ng-controller="DimensionsCtrl">
-        <div class="idd-flex-hz idd-w-1_3 idd-flex-shrink-0">
-            <form class="idd-flex-vt-2 idd-w-1 idd-flex-shrink-0" novalidate>
-                <fieldset class="idd-flex-vt idd-w-19_20 idd-flex-shrink-0">
+    <div class="idd-flex-hz idd-w-1 sub-section" data-ng-controller="DimensionsCtrl">
+        <div class="idd-flex-hz idd-w-1_3">
+            <form class="idd-flex-vt-2 idd-w-1" novalidate>
+                <fieldset class="idd-flex-vt idd-w-19_20">
                     <angucomplete-alt id="autocomplete-height"
                                       placeholder="Set Height Class (e.g. h-*)"
                                       data-local-data="heightClasses"
@@ -170,23 +170,23 @@
                 </fieldset>
             </form>
         </div>
-        <div class="idd-flex-hz-5 idd-w-1_3 idd-flex-shrink-0">
+        <div class="idd-flex-hz-5 idd-w-1_3">
             <div class="parent idd-flex-hz-5">
                 <div class="yellow" data-ng-class="childClasses"></div>
             </div>
         </div>
-        <div class="idd-flex-vt-2 idd-w-1_3 idd-flex-shrink-0">
-            <div class="idd-w-19_20">
+        <div class="idd-flex-vt-2 idd-w-1_3">
+            <div class="idd-w-17_20">
                 <p><span class="parent-class-label">Child classes:</span>&nbsp;<strong>{{childClasses.join(', ')}}</strong></p>
             </div>
         </div>
     </div>
-    <div class="idd-flex-vt idd-w-1 sub-section idd-flex-shrink-0">
+    <div class="idd-flex-vt idd-w-1 sub-section">
         <p>These classes set dimensions <strong>percentage</strong>-relative to their parent. Note that in order for the height classes to be useful, you will need to set an absolute-height on the containing parent.</p>
         <p>The classes follow a similar naming as the flexbox ones:</p>
     </div>
-    <div class="idd-flex-hz idd-w-1 idd-flex-shrink-0">
-        <div class="idd-flex-vt-3 idd-w-1_2 idd-flex-shrink-0">
+    <div class="idd-flex-hz idd-w-1">
+        <div class="idd-flex-vt-3 idd-w-1_2">
             <p>Supported fractions are:</p>
             <ul>
                 <li>whole (<code>idd-w-1</code>, aka 100%)</li>
@@ -201,11 +201,11 @@
                 <li>twentieths (e.g. <code>idd-h-17_20</code>)</li>
             </ul>
         </div>
-        <div class="idd-flex-hz-5 idd-w-1_2 idd-flex-shrink-0">
+        <div class="idd-flex-hz-5 idd-w-1_2">
             <img src="assets/idd-style-dimensions.png" class="idd-w-1">
         </div>
     </div>
-    <div class="idd-flex-vt idd-w-1 sub-section idd-flex-shrink-0">
+    <div class="idd-flex-vt idd-w-1 sub-section">
         <p>Note that equivalent, unsimplified fractional classes (e.g. <code>idd-h-16_20</code> == <code>idd-h-4_5</code>) are conveniently provided.</p>
     </div>
 </div>

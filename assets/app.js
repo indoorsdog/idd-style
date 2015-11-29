@@ -17,7 +17,7 @@
             .uniq()
             .sort()
             .map(function (r) {
-                return {name: r.substr(1)};
+                return {name: r.substr(1).replace(/\\/g, '')};
             })
             .value();
         $scope.selectedClass = null;
