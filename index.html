@@ -22,8 +22,8 @@
         <p>The black box is the parent container to which the classes selected from the form inputs will be
             applied.</p>
         <p>The colored squares are its affected children.</p>
-        <p><strong>IMPORTANT:</strong> The "base" flex classes of this library set <code>flex-shrink</code> to 0, when the default in the spec is 1 (i.e. things can shrink). After extensive use of flexbox, the default tended to surprise. When we set dimensions (see next section), we expected those dimensions, but in testing would wind up with vastly different layouts across browsers due to differing agent interpretations of <code>flex-shrink</code>.</p>
-        <p>If you desire the default <code>flex-shrink: 1</code>, use any of this library's flex classes but with the suffix <code>!</code> (e.g. <code>class="idd-flex-hz-2!"</code> is the shrinkable version of <code>class="idd-flex-hz-2"</code>).</p>
+        <p><strong>IMPORTANT:</strong> The "base" flex classes of this library set <code>flex-shrink</code> to 0, when the default in the spec is 1 (i.e. things can shrink). After extensive use of flexbox, the default tended to surprise. When we set dimensions (see next section), we expected those dimensions. And when we didn't set dimensions, we expected "common sense" results. In both cases, in testing, we would wind up with vastly different layouts across browsers due to differing agent interpretations of the implied <code>flex-shrink: 1</code>.</p>
+        <p>If you desire the default <code>flex-shrink: 1</code>, use any of this library's flex principal classes but with the suffix <code>!</code> (e.g. <code>class="idd-flex-hz-2!"</code> is the shrinkable version of <code>class="idd-flex-hz-2"</code>).</p>
         <p>In fact, notice the difference on the parent box as you apply the different flavors.</p>
     </div>
     <div class="idd-flex-hz idd-w-1 sub-section" data-ng-controller="FlexboxCtrl">
