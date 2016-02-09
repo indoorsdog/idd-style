@@ -15,4 +15,8 @@ The CSS is in the [distribution folder](dist/css). Use what you want.
 
 Flexbox support, right now, is not comprehensive (e.g. no RTL layout support, no child ordering or self-alignment -- to name a few) but may be in future iterations.
 
-If you're working in a Sass environment, feel free to extend or mixin [the source](src) -- particularly `idd-responsive.scss`, a collection of mixins for cross-browser responsive design support, including Bootstrap-defaults.
+If you're working in a Sass environment, feel free to extend or mixin [the source](src/scss) -- particularly `idd-responsive.scss`, a collection of mixins for cross-browser responsive design support, including Bootstrap-defaults.
+
+Now with [partials support](src/partials).
+
+See [releases](/releases) for notes.
