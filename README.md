@@ -19,4 +19,4 @@ If you're working in a Sass environment, feel free to extend or mixin [the sourc
 
 Now with [partials support](src/partials).
 
-See [releases](/releases) for notes.
+See [releases](https://github.com/indoorsdog/idd-style/releases) for notes.
