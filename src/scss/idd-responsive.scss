@@ -1,31 +1,33 @@
-@mixin idd-responsive-styles($min-width: 0px) {
+@mixin idd-responsive($min-width, $max-width) {
   @media screen {
     @media (min-width: $min-width) {
-      @content;
+      @media(max-width: $max-width) {
+        @content;
+      }
     }
   }
 }
 
-@mixin idd-responsive-bootstrap-xs() {
-  @include idd-responsive-styles() {
+@mixin idd-bootstrap-xs() {
+  @include idd-responsive($min-width: 0px, $max-width: 767px) {
     @content;
   };
 };
 
-@mixin idd-responsive-bootstrap-md() {
-  @include idd-responsive-styles($min-width: 768px) {
+@mixin idd-bootstrap-sm() {
+  @include idd-responsive($min-width: 768px, $max-width: 991px) {
     @content;
   };
 };
 
-@mixin idd-responsive-bootstrap-lg() {
-  @include idd-responsive-styles($min-width: 992px) {
+@mixin idd-bootstrap-md() {
+  @include idd-responsive($min-width: 992px, $max-width: 1199px) {
     @content;
   };
-}
+};
 
-@mixin idd-responsive-bootstrap-xl() {
-  @include idd-responsive-styles($min-width: 1200px) {
+@mixin idd-bootstrap-lg() {
+  @include idd-responsive($min-width: 1200px, $max-width: 4096px) {
     @content;
   };
 }
